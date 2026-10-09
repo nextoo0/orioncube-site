@@ -46,6 +46,9 @@ const GENERATIONS = {
   6: [650, 721], 7: [722, 809], 8: [810, 905], 9: [906, 1025]
 };
 
+// ============================================
+// FONCTIONS UTILITAIRES
+// ============================================
 function translateType(type) {
   return TYPE_FR[type] || type;
 }
@@ -68,6 +71,21 @@ function getPokemonImage(id) {
   return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`;
 }
 
+// 🔥 Récupère le nom français d'un Pokémon
+async function getFrenchName(id) {
+  try {
+    const response = await fetch(`${POKEAPI_URL}/pokemon-species/${id}`);
+    const data = await response.json();
+    const frName = data.names.find(n => n.language.name === 'fr');
+    return frName ? frName.name : null;
+  } catch (e) {
+    return null;
+  }
+}
+
+// ============================================
+// CHARGEMENT
+// ============================================
 async function loadAllPokemon() {
   if (isLoading) return;
   isLoading = true;
@@ -76,7 +94,7 @@ async function loadAllPokemon() {
   grid.innerHTML = `
     <div class="loader">
       <div class="loader-spinner"></div>
-      Chargement des Pokémon... (30 sec environ)
+      Chargement des Pokémon... (1-2 min la première fois)
     </div>
   `;
 
@@ -92,9 +110,14 @@ async function loadAllPokemon() {
         try {
           const detailResponse = await fetch(`${POKEAPI_URL}/pokemon/${id}`);
           const detail = await detailResponse.json();
+          
+          // 🔥 Récupère le nom français
+          const frenchName = await getFrenchName(id);
+          
           return {
             id,
-            name: detail.name,
+            name: frenchName || detail.name,
+            nameEn: detail.name,
             types: detail.types.map(t => t.type.name),
             stats: detail.stats.reduce((acc, s) => {
               acc[s.stat.name] = s.base_stat;
@@ -124,6 +147,9 @@ async function loadAllPokemon() {
   isLoading = false;
 }
 
+// ============================================
+// AFFICHAGE
+// ============================================
 function displayPokemon() {
   const grid = document.getElementById('pokedex-grid');
   grid.innerHTML = '';
@@ -173,8 +199,9 @@ function applyFilters() {
   filteredPokemon = allPokemon.filter(p => {
     if (search) {
       const matchName = p.name.toLowerCase().includes(search);
+      const matchNameEn = p.nameEn.toLowerCase().includes(search);
       const matchId = String(p.id).includes(search);
-      if (!matchName && !matchId) return false;
+      if (!matchName && !matchNameEn && !matchId) return false;
     }
     if (type !== 'all' && !p.types.includes(type)) return false;
     if (gen !== 'all' && p.generation !== parseInt(gen)) return false;
@@ -190,6 +217,9 @@ function applyFilters() {
   displayPokemon();
 }
 
+// ============================================
+// MODAL
+// ============================================
 function openModal(pokemon) {
   const modal = document.getElementById('pokemon-modal');
   const body = document.getElementById('modal-body');
@@ -248,6 +278,9 @@ function closeModal() {
   document.getElementById('pokemon-modal').classList.remove('open');
 }
 
+// ============================================
+// ÉVÉNEMENTS
+// ============================================
 document.getElementById('prev-page').addEventListener('click', () => {
   if (currentPage > 1) {
     currentPage--;
