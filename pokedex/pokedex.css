@@ -9,15 +9,12 @@
 
 :root {
   --violet: #8a2be2;
-  --violet-dark: #4a1a7a;
   --bleu: #4a6cf7;
   --bleu-clair: #7ec8ff;
   --blanc: #ffffff;
   --gris-clair: #b8b8d8;
   --noir: #0a0a15;
   --discord: #5865F2;
-  --success: #4caf50;
-  --warning: #ff9800;
 }
 
 body {
@@ -33,9 +30,7 @@ a {
   color: inherit;
 }
 
-/* ============================================ */
-/* NAVBAR                                        */
-/* ============================================ */
+/* NAVBAR */
 .navbar {
   position: fixed;
   top: 0;
@@ -130,9 +125,7 @@ a {
   box-shadow: 0 8px 25px rgba(138, 43, 226, 0.6);
 }
 
-/* ============================================ */
-/* POKÉDEX HEADER                                */
-/* ============================================ */
+/* HEADER */
 .pokedex-header {
   padding: 140px 30px 40px;
   text-align: center;
@@ -160,9 +153,7 @@ a {
   margin: 0 auto;
 }
 
-/* ============================================ */
-/* FILTRES                                       */
-/* ============================================ */
+/* FILTRES */
 .pokedex-filters {
   padding: 30px 30px 20px;
   background: rgba(0, 0, 0, 0.3);
@@ -273,9 +264,7 @@ a {
   font-size: 18px;
 }
 
-/* ============================================ */
-/* GRILLE POKÉDEX                                */
-/* ============================================ */
+/* GRILLE */
 .pokedex-content {
   padding: 40px 30px 80px;
   max-width: 1400px;
@@ -372,7 +361,6 @@ a {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-/* Types couleurs */
 .type-fire { background: #f08030; }
 .type-water { background: #6890f0; }
 .type-grass { background: #78c850; }
@@ -392,9 +380,7 @@ a {
 .type-flying { background: #a890f0; }
 .type-normal { background: #a8a878; }
 
-/* ============================================ */
-/* PAGINATION                                    */
-/* ============================================ */
+/* PAGINATION */
 .pokedex-pagination {
   display: flex;
   justify-content: center;
@@ -434,9 +420,7 @@ a {
   letter-spacing: 1px;
 }
 
-/* ============================================ */
-/* MODAL (Popup)                                 */
-/* ============================================ */
+/* MODAL */
 .pokemon-modal {
   position: fixed;
   inset: 0;
@@ -563,9 +547,7 @@ a {
   color: var(--blanc);
 }
 
-/* ============================================ */
-/* FOOTER                                        */
-/* ============================================ */
+/* FOOTER */
 .footer {
   padding: 40px 30px;
   background: rgba(0, 0, 0, 0.6);
@@ -588,9 +570,7 @@ a {
   color: rgba(255, 255, 255, 0.5);
 }
 
-/* ============================================ */
-/* RESPONSIVE                                    */
-/* ============================================ */
+/* RESPONSIVE */
 @media (max-width: 900px) {
   .navbar-menu { display: none; }
   .pokedex-grid {
@@ -601,15 +581,14 @@ a {
   .modal-stats { grid-template-columns: 1fr; }
 }
 
-/* ============================================ */
-/* LOADER                                        */
-/* ============================================ */
+/* LOADER */
 .loader {
   text-align: center;
   padding: 60px 20px;
   color: var(--gris-clair);
   font-size: 16px;
   letter-spacing: 2px;
+  grid-column: 1 / -1;
 }
 
 .loader-spinner {
@@ -626,7 +605,6 @@ a {
   to { transform: rotate(360deg); }
 }
 
-/* Message vide */
 .no-results {
   text-align: center;
   padding: 60px 20px;
