@@ -51,16 +51,19 @@ window.addEventListener('hashchange', () => {
 // ============================================
 // TRANSITION DE PAGE (liens navbar)
 // ============================================
-document.querySelectorAll('a[href$=".html"], a[href$="/"], a[href="../"]').forEach(link => {
+document.querySelectorAll('a[href$=".html"]').forEach(link => {
   const href = link.getAttribute('href');
-  if (!href || href.startsWith('http') || href.startsWith('#') || href.startsWith('mailto')) return;
+  if (!href) return;
+  if (href.startsWith('http')) return;
+  if (href.startsWith('#')) return;
+  if (href.startsWith('mailto')) return;
+  if (link.target === '_blank') return;
 
   link.addEventListener('click', (e) => {
     e.preventDefault();
     const destination = link.href;
 
     window.scrollTo({ top: 0, behavior: 'instant' });
-
     document.body.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
     document.body.style.opacity = '0';
     document.body.style.transform = 'scale(0.98)';
