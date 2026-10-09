@@ -124,7 +124,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // ============================================
 document.querySelectorAll('a[href$=".html"]').forEach(link => {
   const href = link.getAttribute('href');
-  if (!href || href.startsWith('http') || href.startsWith('#') || href.startsWith('mailto')) return;
+  if (!href) return;
+  if (href.startsWith('http')) return;
+  if (href.startsWith('#')) return;
+  if (href.startsWith('mailto')) return;
+  if (link.target === '_blank') return;
 
   link.addEventListener('click', (e) => {
     e.preventDefault();
