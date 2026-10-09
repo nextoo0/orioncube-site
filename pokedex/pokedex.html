@@ -12,21 +12,18 @@
 </head>
 <body>
 
-  <!-- ============================================ -->
-  <!-- NAVBAR                                        -->
-  <!-- ============================================ -->
+  <!-- NAVBAR -->
   <header class="navbar">
     <div class="navbar-container">
-      <a href="index.html" class="navbar-logo">
+      <a href="../" class="navbar-logo">
         <span class="logo-icon">🌌</span>
         <span class="logo-text">ORIONCUBE</span>
       </a>
 
       <nav class="navbar-menu">
-        <a href="index.html" class="nav-link">Accueil</a>
+        <a href="../" class="nav-link">Accueil</a>
         <a href="pokedex.html" class="nav-link active">Pokédex</a>
-        <a href="wiki.html" class="nav-link">Wiki</a>
-        <a href="index.html#boutique" class="nav-link">Boutique</a>
+        <a href="../wiki/wiki.html" class="nav-link">Wiki</a>
         <a href="https://discord.gg/vt4hqCUpUf" target="_blank" class="nav-link discord">Discord</a>
       </nav>
 
@@ -34,9 +31,7 @@
     </div>
   </header>
 
-  <!-- ============================================ -->
-  <!-- POKÉDEX HEADER                                -->
-  <!-- ============================================ -->
+  <!-- HEADER -->
   <section class="pokedex-header">
     <div class="pokedex-header-content">
       <h1>Pokédex <span class="accent">OrionCube</span></h1>
@@ -44,19 +39,15 @@
     </div>
   </section>
 
-  <!-- ============================================ -->
-  <!-- FILTRES                                       -->
-  <!-- ============================================ -->
+  <!-- FILTRES -->
   <section class="pokedex-filters">
     <div class="filters-container">
 
-      <!-- Recherche -->
       <div class="search-box">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
         <input type="text" id="search-input" placeholder="Rechercher un Pokémon (nom ou numéro)..." />
       </div>
 
-      <!-- Filtres -->
       <div class="filter-group">
         <label>Type :</label>
         <select id="filter-type">
@@ -110,21 +101,15 @@
 
     </div>
 
-    <!-- Statistiques -->
     <div class="pokedex-stats">
       <span><strong id="pokemon-count">0</strong> Pokémon affichés</span>
     </div>
   </section>
 
-  <!-- ============================================ -->
-  <!-- GRILLE POKÉDEX                                -->
-  <!-- ============================================ -->
+  <!-- GRILLE -->
   <section class="pokedex-content">
-    <div class="pokedex-grid" id="pokedex-grid">
-      <!-- Les Pokémon seront ajoutés ici par JS -->
-    </div>
+    <div class="pokedex-grid" id="pokedex-grid"></div>
 
-    <!-- Pagination -->
     <div class="pokedex-pagination">
       <button id="prev-page" class="page-btn">← Précédent</button>
       <span id="page-info">Page 1</span>
@@ -132,21 +117,15 @@
     </div>
   </section>
 
-  <!-- ============================================ -->
-  <!-- MODAL (Popup Pokémon)                         -->
-  <!-- ============================================ -->
+  <!-- MODAL -->
   <div class="pokemon-modal" id="pokemon-modal">
     <div class="modal-content">
       <button class="modal-close" id="modal-close">✕</button>
-      <div class="modal-body" id="modal-body">
-        <!-- Contenu ajouté par JS -->
-      </div>
+      <div class="modal-body" id="modal-body"></div>
     </div>
   </div>
 
-  <!-- ============================================ -->
-  <!-- FOOTER                                        -->
-  <!-- ============================================ -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-logo">
