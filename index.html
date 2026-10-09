@@ -6,6 +6,7 @@
   <title>OrionCube — Serveur Minecraft Cobblemon Français</title>
   <meta name="description" content="OrionCube, le serveur Minecraft Cobblemon français. 100+ mods optimisés, shaders, communauté active. Rejoins l'aventure !" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="i18n.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
@@ -23,34 +24,45 @@
       <nav class="navbar-menu">
         <a href="index.html" class="nav-link active">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-          Accueil
+          <span data-i18n="nav.home">Accueil</span>
         </a>
         <a href="pokedex/pokedex.html" class="nav-link">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-          Pokédex
+          <span data-i18n="nav.pokedex">Pokédex</span>
         </a>
         <a href="wiki/wiki.html" class="nav-link">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-          Wiki
+          <span data-i18n="nav.wiki">Wiki</span>
         </a>
         <a href="boutique/boutique.html" class="nav-link">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-          Boutique
+          <span data-i18n="nav.boutique">Boutique</span>
         </a>
         <a href="vote/vote.html" class="nav-link">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          Vote
+          <span data-i18n="nav.vote">Vote</span>
         </a>
         <a href="https://discord.gg/vt4hqCUpUf" target="_blank" class="nav-link discord">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.79 19.79 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128c.126-.094.252-.192.372-.291a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.099.246.198.373.292a.077.077 0 0 1-.006.127 12.3 12.3 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.84 19.84 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
-          Discord
+          <span data-i18n="nav.discord">Discord</span>
         </a>
       </nav>
 
       <a href="#" class="navbar-login">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
-        Connexion
+        <span data-i18n="nav.login">Connexion</span>
       </a>
+
+      <div class="lang-switcher">
+        <button class="lang-btn" data-lang="fr" aria-label="Français">
+          <span class="lang-flag">🇫🇷</span>
+          <span class="lang-code">FR</span>
+        </button>
+        <button class="lang-btn" data-lang="en" aria-label="English">
+          <span class="lang-flag">🇬🇧</span>
+          <span class="lang-code">EN</span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -65,9 +77,9 @@
         <span class="title-line accent">CUBE</span>
       </h1>
 
-      <p class="hero-tagline">DEVIENS UN DRESSEUR COBBLEMON</p>
+      <p class="hero-tagline" data-i18n="hero.tagline">DEVIENS UN DRESSEUR COBBLEMON</p>
 
-      <p class="hero-subtitle">
+      <p class="hero-subtitle" data-i18n="hero.subtitle">
         Rejoins notre serveur et vis une aventure Pokémon unique. 
         100+ mods optimisés, shaders, communauté active.
       </p>
@@ -75,17 +87,17 @@
       <div class="hero-buttons">
         <a href="#" class="btn-primary">
           <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-          JOUER MAINTENANT
+          <span data-i18n="hero.play">JOUER MAINTENANT</span>
         </a>
         <button class="btn-secondary" id="copy-ip" data-ip="Bientôt disponible">
-          <span class="ip-text">Prochainement</span>
+          <span class="ip-text" data-i18n="hero.ip">Prochainement</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
         </button>
       </div>
 
       <div class="hero-status status-maintenance">
         <span class="status-dot"></span>
-        <span class="status-text"><strong id="player-count">0/100</strong> EN MAINTENANCE</span>
+        <span class="status-text"><strong id="player-count">0/100</strong> <span data-i18n="hero.maintenance">EN MAINTENANCE</span></span>
       </div>
     </div>
   </section>
@@ -99,7 +111,7 @@
         </div>
         <div class="stat-info">
           <div class="stat-value" id="stat-players">0/100</div>
-          <div class="stat-label">En développement</div>
+          <div class="stat-label" data-i18n="stats.players">En développement</div>
         </div>
       </div>
 
@@ -108,8 +120,8 @@
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.79 19.79 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128c.126-.094.252-.192.372-.291a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.099.246.198.373.292a.077.077 0 0 1-.006.127 12.3 12.3 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.84 19.84 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
         </div>
         <div class="stat-info">
-          <div class="stat-value">Nouveau</div>
-          <div class="stat-label">Serveur en création</div>
+          <div class="stat-value" data-i18n="stats.new">Nouveau</div>
+          <div class="stat-label" data-i18n="stats.creating">Serveur en création</div>
         </div>
       </div>
 
@@ -119,7 +131,7 @@
         </div>
         <div class="stat-info">
           <div class="stat-value">100+</div>
-          <div class="stat-label">Mods installés et optimisés</div>
+          <div class="stat-label" data-i18n="stats.mods">Mods installés et optimisés</div>
         </div>
       </div>
     </div>
@@ -129,48 +141,48 @@
   <section class="features" id="features">
     <div class="features-container">
       <div class="section-header">
-        <h2>Pourquoi <span class="accent">OrionCube</span> ?</h2>
-        <p>Une expérience Cobblemon pensée pour toi.</p>
+        <h2><span data-i18n="features.title1">Pourquoi</span> <span class="accent" data-i18n="features.title2">OrionCube</span> <span data-i18n="features.title3">?</span></h2>
+        <p data-i18n="features.subtitle">Une expérience Cobblemon pensée pour toi.</p>
       </div>
 
       <div class="features-grid">
         <a href="pokedex/pokedex.html" class="feature-card feature-link">
           <div class="feature-icon">🐉</div>
-          <h3>Cobblemon complet</h3>
-          <p>Capture, entraîne et affronte des centaines de Pokémon dans un monde ouvert magnifique.</p>
-          <span class="feature-arrow">Découvrir le Pokédex →</span>
+          <h3 data-i18n="features.cobblemon.title">Cobblemon complet</h3>
+          <p data-i18n="features.cobblemon.text">Capture, entraîne et affronte des centaines de Pokémon dans un monde ouvert magnifique.</p>
+          <span class="feature-arrow" data-i18n="features.cobblemon.link">Découvrir le Pokédex →</span>
         </a>
 
         <div class="feature-card">
           <div class="feature-icon">⚡</div>
-          <h3>Optimisé & fluide</h3>
-          <p>Shaders Iris, Sodium, Lithium. Des FPS élevés même sur des configurations modestes.</p>
+          <h3 data-i18n="features.optimized.title">Optimisé & fluide</h3>
+          <p data-i18n="features.optimized.text">Shaders Iris, Sodium, Lithium. Des FPS élevés même sur des configurations modestes.</p>
         </div>
 
         <div class="feature-card">
           <div class="feature-icon">🎨</div>
-          <h3>Design unique</h3>
-          <p>Launcher custom, interface stylée, expérience visuelle premium à chaque lancement.</p>
+          <h3 data-i18n="features.design.title">Design unique</h3>
+          <p data-i18n="features.design.text">Launcher custom, interface stylée, expérience visuelle premium à chaque lancement.</p>
         </div>
 
         <a href="https://discord.gg/vt4hqCUpUf" target="_blank" class="feature-card feature-link">
           <div class="feature-icon">👥</div>
-          <h3>Communauté active</h3>
-          <p>Rejoins des centaines de dresseurs sur Discord, participe aux événements et aux raids.</p>
-          <span class="feature-arrow">Rejoindre le Discord →</span>
+          <h3 data-i18n="features.community.title">Communauté active</h3>
+          <p data-i18n="features.community.text">Rejoins des centaines de dresseurs sur Discord, participe aux événements et aux raids.</p>
+          <span class="feature-arrow" data-i18n="features.community.link">Rejoindre le Discord →</span>
         </a>
 
         <a href="changelog/changelog.html" class="feature-card feature-link">
           <div class="feature-icon">📜</div>
-          <h3>Changelog</h3>
-          <p>Suis toutes les nouveautés, correctifs et optimisations du serveur et du launcher.</p>
-          <span class="feature-arrow">Voir les updates →</span>
+          <h3 data-i18n="features.changelog.title">Changelog</h3>
+          <p data-i18n="features.changelog.text">Suis toutes les nouveautés, correctifs et optimisations du serveur et du launcher.</p>
+          <span class="feature-arrow" data-i18n="features.changelog.link">Voir les updates →</span>
         </a>
 
         <div class="feature-card">
           <div class="feature-icon">🏆</div>
-          <h3>Contenu exclusif</h3>
-          <p>Événements, quêtes, arènes, Méga-Évolutions et bien plus encore à découvrir.</p>
+          <h3 data-i18n="features.content.title">Contenu exclusif</h3>
+          <p data-i18n="features.content.text">Événements, quêtes, arènes, Méga-Évolutions et bien plus encore à découvrir.</p>
         </div>
       </div>
     </div>
@@ -180,8 +192,8 @@
   <section class="team" id="equipe">
     <div class="team-container">
       <div class="section-header">
-        <h2>Notre <span class="accent">Équipe</span></h2>
-        <p>Les personnes qui font vivre OrionCube au quotidien.</p>
+        <h2><span data-i18n="team.title1">Notre</span> <span class="accent" data-i18n="team.title2">Équipe</span></h2>
+        <p data-i18n="team.subtitle">Les personnes qui font vivre OrionCube au quotidien.</p>
       </div>
 
       <div class="team-grid">
@@ -191,7 +203,7 @@
             <img src="https://mc-heads.net/body/nexto_mc/110" alt="nexto_mc" loading="lazy" />
           </div>
           <h3 class="team-name">nexto_mc</h3>
-          <p class="team-role">Fondateur / Dev</p>
+          <p class="team-role" data-i18n="team.role.nexto">Fondateur / Dev</p>
         </div>
 
         <div class="team-card">
@@ -200,7 +212,7 @@
             <img src="https://mc-heads.net/body/Shachouu02/110" alt="Shachouu02" loading="lazy" />
           </div>
           <h3 class="team-name">Shachouu02</h3>
-          <p class="team-role">Co-Fonda / Graphiste</p>
+          <p class="team-role" data-i18n="team.role.shachouu">Co-Fonda / Graphiste</p>
         </div>
       </div>
     </div>
@@ -209,17 +221,17 @@
   <!-- CTA -->
   <section class="cta">
     <div class="cta-container">
-      <h2>Prêt à commencer l'aventure ?</h2>
-      <p>Rejoins OrionCube et deviens le Maître Pokémon ultime.</p>
+      <h2 data-i18n="cta.title">Prêt à commencer l'aventure ?</h2>
+      <p data-i18n="cta.text">Rejoins OrionCube et deviens le Maître Pokémon ultime.</p>
       
       <div class="cta-buttons">
         <a href="#" class="btn-primary large">
           <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-          TÉLÉCHARGER LE LAUNCHER
+          <span data-i18n="cta.download">TÉLÉCHARGER LE LAUNCHER</span>
         </a>
         <a href="https://discord.gg/vt4hqCUpUf" target="_blank" class="btn-discord large">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.79 19.79 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128c.126-.094.252-.192.372-.291a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.099.246.198.373.292a.077.077 0 0 1-.006.127 12.3 12.3 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.84 19.84 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
-          REJOINDRE LE DISCORD
+          <span data-i18n="cta.discord">REJOINDRE LE DISCORD</span>
         </a>
       </div>
     </div>
@@ -232,13 +244,14 @@
         <span class="logo-icon">🌌</span>
         <span>ORIONCUBE</span>
       </div>
-      <p class="footer-text">
+      <p class="footer-text" data-i18n="footer.text">
         © 2026 OrionCube — Serveur Minecraft Cobblemon Français. 
         Non affilié à Mojang AB ni à The Pokémon Company.
       </p>
     </div>
   </footer>
 
+  <script src="i18n.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
