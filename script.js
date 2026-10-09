@@ -102,7 +102,7 @@ window.addEventListener('scroll', () => {
 // updatePlayerCount();
 // setInterval(updatePlayerCount, 60000);
 
-console.log('ℹ️ Statut du serveur : en développement');
+console.log('ℹ️ Statut du serveur : en maintenance');
 
 // ============================================
 // ANIMATIONS AU SCROLL (Fade-in)
