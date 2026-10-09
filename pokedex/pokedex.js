@@ -46,9 +46,6 @@ const GENERATIONS = {
   6: [650, 721], 7: [722, 809], 8: [810, 905], 9: [906, 1025]
 };
 
-// ============================================
-// FONCTIONS UTILITAIRES
-// ============================================
 function translateType(type) {
   return TYPE_FR[type] || type;
 }
@@ -71,7 +68,6 @@ function getPokemonImage(id) {
   return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`;
 }
 
-// 🔥 Récupère le nom français d'un Pokémon
 async function getFrenchName(id) {
   try {
     const response = await fetch(`${POKEAPI_URL}/pokemon-species/${id}`);
@@ -83,9 +79,6 @@ async function getFrenchName(id) {
   }
 }
 
-// ============================================
-// CHARGEMENT
-// ============================================
 async function loadAllPokemon() {
   if (isLoading) return;
   isLoading = true;
@@ -110,10 +103,9 @@ async function loadAllPokemon() {
         try {
           const detailResponse = await fetch(`${POKEAPI_URL}/pokemon/${id}`);
           const detail = await detailResponse.json();
-          
-          // 🔥 Récupère le nom français
+
           const frenchName = await getFrenchName(id);
-          
+
           return {
             id,
             name: frenchName || detail.name,
@@ -147,9 +139,6 @@ async function loadAllPokemon() {
   isLoading = false;
 }
 
-// ============================================
-// AFFICHAGE
-// ============================================
 function displayPokemon() {
   const grid = document.getElementById('pokedex-grid');
   grid.innerHTML = '';
@@ -217,9 +206,6 @@ function applyFilters() {
   displayPokemon();
 }
 
-// ============================================
-// MODAL
-// ============================================
 function openModal(pokemon) {
   const modal = document.getElementById('pokemon-modal');
   const body = document.getElementById('modal-body');
@@ -278,9 +264,6 @@ function closeModal() {
   document.getElementById('pokemon-modal').classList.remove('open');
 }
 
-// ============================================
-// ÉVÉNEMENTS
-// ============================================
 document.getElementById('prev-page').addEventListener('click', () => {
   if (currentPage > 1) {
     currentPage--;
@@ -312,3 +295,30 @@ document.addEventListener('keydown', (e) => {
 });
 
 loadAllPokemon();
+
+// ============================================
+// TRANSITION DE PAGE (liens navbar)
+// ============================================
+document.querySelectorAll('a[href$=".html"], a[href$="/"], a[href="../"], a[href$="/pokedex.html"]').forEach(link => {
+  const href = link.getAttribute('href');
+  if (!href || href.startsWith('http') || href.startsWith('#') || href.startsWith('mailto')) return;
+
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const destination = link.href;
+
+    window.scrollTo({ top: 0, behavior: 'instant' });
+
+    document.body.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+    document.body.style.opacity = '0';
+    document.body.style.transform = 'scale(0.98)';
+
+    setTimeout(() => {
+      window.location.href = destination;
+    }, 400);
+  });
+});
+
+window.addEventListener('load', () => {
+  window.scrollTo({ top: 0, behavior: 'instant' });
+});
