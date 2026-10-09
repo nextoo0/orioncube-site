@@ -1,6 +1,3 @@
-/* ============================================ */
-/* RESET & BASE                                  */
-/* ============================================ */
 * {
   margin: 0;
   padding: 0;
@@ -31,6 +28,25 @@ body {
   color: var(--blanc);
   line-height: 1.6;
   overflow-x: hidden;
+  opacity: 1;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  animation: pageFadeIn 0.5s ease;
+}
+
+body.page-transition-out {
+  opacity: 0;
+  transform: scale(0.98);
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 a {
@@ -38,9 +54,7 @@ a {
   color: inherit;
 }
 
-/* ============================================ */
-/* NAVBAR                                        */
-/* ============================================ */
+/* NAVBAR */
 .navbar {
   position: fixed;
   top: 0;
@@ -130,18 +144,6 @@ a {
   background: rgba(138, 43, 226, 0.2);
 }
 
-.nav-link.active::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 30px;
-  height: 2px;
-  background: linear-gradient(90deg, var(--bleu-clair), var(--violet));
-  border-radius: 2px;
-}
-
 .nav-link.discord {
   background: rgba(88, 101, 242, 0.15);
   color: var(--blanc);
@@ -178,9 +180,7 @@ a {
   box-shadow: 0 8px 25px rgba(138, 43, 226, 0.6);
 }
 
-/* ============================================ */
-/* HERO                                          */
-/* ============================================ */
+/* HERO */
 .hero {
   position: relative;
   height: 100vh;
@@ -239,7 +239,6 @@ a {
   letter-spacing: 6px;
   line-height: 1;
   margin-bottom: 20px;
-  text-shadow: 0 0 60px rgba(138, 43, 226, 0.6);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -249,6 +248,10 @@ a {
 .title-line {
   color: var(--blanc);
   display: block;
+  text-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.9),
+    0 8px 30px rgba(0, 0, 0, 0.6),
+    0 0 60px rgba(138, 43, 226, 0.6);
 }
 
 .title-line.accent {
@@ -256,7 +259,9 @@ a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  filter: drop-shadow(0 0 40px rgba(138, 43, 226, 0.8));
+  filter:
+    drop-shadow(0 4px 12px rgba(0, 0, 0, 0.9))
+    drop-shadow(0 0 40px rgba(138, 43, 226, 0.8));
   font-size: 0.65em;
   letter-spacing: 12px;
 }
@@ -431,23 +436,20 @@ a {
   color: var(--success);
 }
 
-/* 🔥 Statut MAINTENANCE (voyant orange) */
-.hero-status.status-maintenance {
-  border-color: rgba(255, 152, 0, 0.4);
+.status-maintenance {
+  border-color: rgba(255, 152, 0, 0.4) !important;
 }
 
-.hero-status.status-maintenance .status-dot {
-  background: var(--warning);
-  box-shadow: 0 0 10px var(--warning);
+.status-maintenance .status-dot {
+  background: var(--warning) !important;
+  box-shadow: 0 0 10px var(--warning) !important;
 }
 
-.hero-status.status-maintenance .status-text strong {
-  color: var(--warning);
+.status-maintenance .status-text strong {
+  color: var(--warning) !important;
 }
 
-/* ============================================ */
-/* STATS                                         */
-/* ============================================ */
+/* STATS */
 .stats {
   padding: 60px 30px;
   background: linear-gradient(180deg, var(--noir) 0%, rgba(74, 26, 122, 0.15) 100%);
@@ -520,9 +522,7 @@ a {
   letter-spacing: 1px;
 }
 
-/* ============================================ */
-/* FEATURES                                      */
-/* ============================================ */
+/* FEATURES */
 .features {
   padding: 100px 30px;
   background: var(--noir);
@@ -616,9 +616,34 @@ a {
   line-height: 1.7;
 }
 
-/* ============================================ */
-/* CTA FINAL                                     */
-/* ============================================ */
+.feature-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.feature-arrow {
+  display: block;
+  margin-top: 15px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, var(--bleu-clair), var(--violet));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.3s ease;
+}
+
+.feature-link:hover .feature-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* CTA */
 .cta {
   padding: 100px 30px;
   background: linear-gradient(135deg, rgba(74, 26, 122, 0.3) 0%, rgba(10, 10, 21, 1) 100%);
@@ -662,9 +687,7 @@ a {
   flex-wrap: wrap;
 }
 
-/* ============================================ */
-/* FOOTER                                        */
-/* ============================================ */
+/* FOOTER */
 .footer {
   padding: 40px 30px;
   background: rgba(0, 0, 0, 0.6);
@@ -694,9 +717,7 @@ a {
   line-height: 1.7;
 }
 
-/* ============================================ */
-/* RESPONSIVE                                    */
-/* ============================================ */
+/* RESPONSIVE */
 @media (max-width: 900px) {
   .navbar-menu {
     display: none;
