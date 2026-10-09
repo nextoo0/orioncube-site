@@ -1,15 +1,26 @@
 /* ============================================ */
+/* NAVBAR RIGHT — Connexion + Lang switcher     */
+/* ============================================ */
+
+.navbar-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+/* ============================================ */
 /* SÉLECTEUR DE LANGUE — ORIONCUBE               */
 /* ============================================ */
 
 .lang-switcher {
   display: flex;
-  gap: 6px;
-  padding: 4px;
+  gap: 4px;
+  padding: 3px;
   background: rgba(138, 43, 226, 0.1);
   border: 1px solid rgba(138, 43, 226, 0.25);
   border-radius: 8px;
-  margin-left: 12px;
   align-items: center;
 }
 
@@ -18,8 +29,8 @@
   align-items: center;
   justify-content: center;
   gap: 4px;
-  padding: 5px 10px;
-  font-size: 14px;
+  padding: 4px 10px;
+  font-size: 13px;
   font-weight: 700;
   border-radius: 6px;
   background: transparent;
@@ -32,7 +43,7 @@
 }
 
 .lang-btn .lang-flag {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1;
 }
 
@@ -43,25 +54,18 @@
 
 .lang-btn:hover {
   background: rgba(138, 43, 226, 0.2);
-  color: var(--blanc);
-  transform: translateY(-1px);
+  color: var(--blanc, #fff);
 }
 
 .lang-btn.active {
-  background: linear-gradient(135deg, var(--bleu), var(--violet));
-  color: var(--blanc);
+  background: linear-gradient(135deg, #4a6cf7, #8a2be2);
+  color: #fff;
   box-shadow: 0 4px 12px rgba(138, 43, 226, 0.4);
-}
-
-.lang-btn.active .lang-code {
-  color: var(--blanc);
 }
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
-  .lang-switcher {
-    margin-left: 0;
-    margin-top: 8px;
-    align-self: center;
+  .navbar-right {
+    align-items: center;
   }
 }
