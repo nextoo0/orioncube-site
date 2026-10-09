@@ -48,20 +48,36 @@
         </a>
       </nav>
 
-      <a href="#" class="navbar-login">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
-        <span data-i18n="nav.login">Connexion</span>
-      </a>
+      <div class="navbar-right">
+        <a href="#" class="navbar-login">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+          <span data-i18n="nav.login">Connexion</span>
+        </a>
 
-      <div class="lang-switcher">
-        <button class="lang-btn" data-lang="fr" aria-label="Français">
-          <span class="lang-flag">🇫🇷</span>
-          <span class="lang-code">FR</span>
-        </button>
-        <button class="lang-btn" data-lang="en" aria-label="English">
-          <span class="lang-flag">🇬🇧</span>
-          <span class="lang-code">EN</span>
-        </button>
+        <div class="lang-switcher">
+          <button class="lang-btn" data-lang="fr" aria-label="Français">
+            <span class="lang-flag">
+              <svg viewBox="0 0 3 2" xmlns="http://www.w3.org/2000/svg">
+                <rect width="1" height="2" fill="#002395"/>
+                <rect x="1" width="1" height="2" fill="#fff"/>
+                <rect x="2" width="1" height="2" fill="#ED2939"/>
+              </svg>
+            </span>
+            <span class="lang-code">FR</span>
+          </button>
+          <button class="lang-btn" data-lang="en" aria-label="English">
+            <span class="lang-flag">
+              <svg viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg">
+                <rect width="60" height="30" fill="#012169"/>
+                <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
+                <path d="M0,0 L60,30 M60,0 L0,30" stroke="#C8102E" stroke-width="4"/>
+                <path d="M30,0 V30 M0,15 H60" stroke="#fff" stroke-width="10"/>
+                <path d="M30,0 V30 M0,15 H60" stroke="#C8102E" stroke-width="6"/>
+              </svg>
+            </span>
+            <span class="lang-code">EN</span>
+          </button>
+        </div>
       </div>
     </div>
   </header>
