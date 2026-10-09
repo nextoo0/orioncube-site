@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wiki — OrionCube</title>
+  <meta name="description" content="Wiki officiel d'OrionCube : guides, légendaires, IVs/EVs, natures, méga-évolutions et plus." />
+  <link rel="stylesheet" href="wiki.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ============================================ -->
+  <!-- NAVBAR                                        -->
+  <!-- ============================================ -->
+  <header class="navbar">
+    <div class="navbar-container">
+      <a href="../" class="navbar-logo">
+        <span class="logo-icon">🌌</span>
+        <span class="logo-text">ORIONCUBE</span>
+      </a>
+
+      <nav class="navbar-menu">
+        <a href="../" class="nav-link">Accueil</a>
+        <a href="../pokedex/pokedex.html" class="nav-link">Pokédex</a>
+        <a href="wiki.html" class="nav-link active">Wiki</a>
+        <a href="https://discord.gg/vt4hqCUpUf" target="_blank" class="nav-link discord">Discord</a>
+      </nav>
+
+      <a href="#" class="navbar-login">Connexion</a>
+    </div>
+  </header>
+
+  <!-- ============================================ -->
+  <!-- WIKI HEADER                                   -->
+  <!-- ============================================ -->
+  <section class="wiki-header">
+    <div class="wiki-header-content">
+      <h1>Wiki <span class="accent">OrionCube</span></h1>
+      <p>Tout ce qu'il faut savoir sur le serveur : guides, règles, légendaires, IVs/EVs, natures et plus.</p>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- WIKI LAYOUT (Sidebar + Content)               -->
+  <!-- ============================================ -->
+  <div class="wiki-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="wiki-sidebar">
+      <nav class="sidebar-nav">
+
+        <!-- Catégorie : Bien démarrer -->
+        <div class="sidebar-category">
+          <h3 class="sidebar-title">🎮 BIEN DÉMARRER</h3>
+          <ul class="sidebar-list">
+            <li><a href="#rejoindre" class="sidebar-link active" data-page="rejoindre">Nous rejoindre</a></li>
+            <li><a href="#reglement" class="sidebar-link" data-page="reglement">Règlement</a></li>
+            <li><a href="#faq" class="sidebar-link" data-page="faq">FAQ</a></li>
+            <li><a href="#commandes" class="sidebar-link" data-page="commandes">Commandes</a></li>
+          </ul>
+        </div>
+
+        <!-- Catégorie : Pokémon -->
+        <div class="sidebar-category">
+          <h3 class="sidebar-title">🐉 POKÉMON</h3>
+          <ul class="sidebar-list">
+            <li><a href="#legendaires" class="sidebar-link" data-page="legendaires">Légendaires</a></li>
+            <li><a href="#ivs-evs" class="sidebar-link" data-page="ivs-evs">IVs & EVs</a></li>
+            <li><a href="#natures" class="sidebar-link" data-page="natures">Natures</a></li>
+            <li><a href="#mega" class="sidebar-link" data-page="mega">Méga, Z & Téra</a></li>
+          </ul>
+        </div>
+
+        <!-- Catégorie : Support -->
+        <div class="sidebar-category">
+          <h3 class="sidebar-title">❓ SUPPORT</h3>
+          <ul class="sidebar-list">
+            <li><a href="https://discord.gg/vt4hqCUpUf" target="_blank" class="sidebar-link">Discord</a></li>
+          </ul>
+        </div>
+
+      </nav>
+    </aside>
+
+    <!-- CONTENU -->
+    <main class="wiki-content">
+
+      <!-- ============================== -->
+      <!-- PAGE : NOUS REJOINDRE          -->
+      <!-- ============================== -->
+      <article class="wiki-page active" id="page-rejoindre">
+        <h1>Nous rejoindre</h1>
+        <p class="page-subtitle">Tout ce qu'il faut pour rejoindre l'aventure OrionCube.</p>
+
+        <div class="info-blocks">
+          <div class="info-block">
+            <div class="info-icon">📥</div>
+            <div>
+              <h3>1. Télécharger le launcher</h3>
+              <p>Télécharge le launcher OrionCube et installe-le. Tout est inclus : Minecraft, Cobblemon, les mods, les shaders.</p>
+            </div>
+          </div>
+
+          <div class="info-block">
+            <div class="info-icon">🔐</div>
+            <div>
+              <h3>2. Se connecter avec Microsoft</h3>
+              <p>Utilise ton compte Microsoft qui possède Minecraft Java. Aucun mot de passe n'est stocké sur nos serveurs.</p>
+            </div>
+          </div>
+
+          <div class="info-block">
+            <div class="info-icon">🎮</div>
+            <div>
+              <h3>3. Cliquer sur JOUER</h3>
+              <p>Le launcher télécharge automatiquement tout le nécessaire. Une fois prêt, clique sur JOUER et rejoins l'aventure.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ============================== -->
+      <!-- PAGE : RÈGLEMENT                -->
+      <!-- ============================== -->
+      <article class="wiki-page" id="page-reglement">
+        <h1>Règlement</h1>
+        <p class="page-subtitle">Les règles à respecter pour garder une communauté saine.</p>
+
+        <div class="warning-block">
+          <strong>⚠️ Important :</strong> Le non-respect du règlement peut entraîner un bannissement définitif.
+        </div>
+
+        <h2>1. Respect</h2>
+        <ul class="list-rules">
+          <li>Aucune insulte, aucun harcèlement, aucun propos discriminatoire.</li>
+          <li>Respecte les autres joueurs et leur façon de jouer.</li>
+          <li>Pas de spam dans le chat.</li>
+        </ul>
+
+        <h2>2. Jeu équitable</h2>
+        <ul class="list-rules">
+          <li>Aucun cheat, hack ou mod non autorisé.</li>
+          <li>Aucun bug abuse (exploitation de bugs).</li>
+          <li>Aucun échange IRL contre des items du serveur.</li>
+        </ul>
+
+        <h2>3. Construction</h2>
+        <ul class="list-rules">
+          <li>Pas de constructions offensantes.</li>
+          <li>Respecte les zones des autres joueurs.</li>
+          <li>Pas de farm massif qui lag le serveur.</li>
+        </ul>
+      </article>
+
+      <!-- ============================== -->
+      <!-- PAGE : FAQ                      -->
+      <!-- ============================== -->
+      <article class="wiki-page" id="page-faq">
+        <h1>FAQ</h1>
+        <p class="page-subtitle">Les questions les plus fréquentes.</p>
+
+        <div class="faq-item">
+          <h3>❓ Le serveur est-il gratuit ?</h3>
+          <p>Oui, OrionCube est 100% gratuit. Tu peux rejoindre et jouer sans rien payer.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>❓ Quelle version de Minecraft faut-il ?</h3>
+          <p>Le serveur tourne sur Minecraft 1.21.1 avec Fabric. Le launcher installe tout automatiquement.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>❓ Puis-je jouer sur mobile ou console ?</h3>
+          <p>Non, OrionCube est uniquement accessible sur PC (Windows, Mac, Linux) via Java Edition.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>❓ Combien de mods sont installés ?</h3>
+          <p>Plus de 100 mods optimisés sont installés automatiquement par le launcher, dont Cobblemon et ses extensions.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>❓ Comment rejoindre le Discord ?</h3>
+          <p>Clique sur le bouton Discord dans la navbar ou <a href="https://discord.gg/vt4hqCUpUf" target="_blank">rejoins-nous ici</a>.</p>
+        </div>
+      </article>
+
+      <!-- ============================== -->
+      <!-- PAGE : COMMANDES                -->
+      <!-- ============================== -->
+      <article class="wiki-page" id="page-commandes">
+        <h1>Commandes</h1>
+        <p class="page-subtitle">Toutes les commandes utiles sur le serveur.</p>
+
+        <h2>🎮 Commandes de base</h2>
+        <div class="command-list">
+          <div class="command">
+            <code>/spawn</code>
+            <span>Retourne au point de spawn.</span>
+          </div>
+          <div class="command">
+            <code>/home</code>
+            <span>Te téléporte à ta maison.</span>
+          </div>
+          <div class="command">
+            <code>/sethome</code>
+            <span>Définit ta maison.</span>
+          </div>
+          <div class="command">
+            <code>/tpa [joueur]</code>
+            <span>Demande à te téléporter à un joueur.</span>
+          </div>
+        </div>
+
+        <h2>🐉 Commandes Cobblemon</h2>
+        <div class="command-list">
+          <div class="command">
+            <code>/pokemon</code>
+            <span>Ouvre ton équipe Pokémon.</span>
+          </div>
+          <div class="command">
+            <code>/pokedex</code>
+            <span>Ouvre ton Pokédex personnel.</span>
+          </div>
+          <div class="command">
+            <code>/legendinfo</code>
+            <span>Affiche l'état des spawns légendaires autour de toi.</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ============================== -->
+      <!-- PAGE : LÉGENDAIRES              -->
+      <!-- ============================== -->
+      <article class="wiki-page" id="page-legendaires">
+        <h1>Légendaires</h1>
+        <p class="page-subtitle">Comment capturer les légendaires sur OrionCube.</p>
+
+        <div class="info-block">
+          <div class="info-icon">🌟</div>
+          <div>
+            <h3>Deux méthodes pour les obtenir</h3>
+            <p>Les légendaires ne tombent pas au hasard. Il faut soit affronter des boss pour obtenir un objet d'invocation, soit les trouver dans leur biome naturel aux bonnes conditions.</p>
+          </div>
+        </div>
+
+        <h2>Méthode 1 : Objet d'invocation</h2>
+        <p>Certains boss et événements droppent un <strong>objet d'invocation</strong> unique à un légendaire. Une fois l'objet en poche, va dans le biome correspondant et utilise-le pour faire apparaître le légendaire.</p>
+
+        <h2>Méthode 2 : Apparition naturelle</h2>
+        <p>Chaque légendaire a un <strong>biome signature</strong>, une <strong>plage horaire</strong> (jour/nuit/aube/crépuscule) et parfois une <strong>météo</strong> ou une <strong>condition spéciale</strong> (souterrain, sous l'eau, etc.).</p>
+
+        <div class="warning-block">
+          <strong>💡 Astuce :</strong> Utilise <code>/legendinfo</code> en jeu pour voir l'état des spawns autour de toi.
+        </div>
+
+        <h2>Quelques légendaires et leurs conditions</h2>
+        <table class="wiki-table">
+          <thead>
+            <tr>
+              <th>Pokémon</th>
+              <th>Biome</th>
+              <th>Heure</th>
+              <th>Condition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Artikodin</td><td>Glaciaire</td><td>Jour</td><td>—</td></tr>
+            <tr><td>Électhor</td><td>Plateau, Savane</td><td>Jour</td><td>—</td></tr>
+            <tr><td>Sulfura</td><td>Volcanique, Désert</td><td>Jour</td><td>—</td></tr>
+            <tr><td>Mewtwo</td><td>Deep Dark</td><td>Tout moment</td><td>Souterrain</td></tr>
+            <tr><td>Mew</td><td>Bambou, Île tropicale</td><td>Tout moment</td><td>Ciel dégagé</td></tr>
+            <tr><td>Lugia</td><td>Océan tempéré</td><td>Midi</td><td>Sous l'eau</td></tr>
+            <tr><td>Rayquaza</td><td>Ciel, Montagne</td><td>Aube & crépuscule</td><td>—</td></tr>
+            <tr><td>Dialga</td><td>Pic montagneux</td><td>Matin</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </article>
+
+      <!-- ============================== -->
+      <!-- PAGE : IVs & EVs                -->
+      <!-- ============================== -->
+      <article class="wiki-page" id="page-ivs-evs">
+        <h1>IVs & EVs</h1>
+        <p class="page-subtitle">Les statistiques cachées qui déterminent la puissance réelle d'un Pokémon.</p>
+
+        <h2>Les IVs (Individual Values)</h2>
+        <p>Les IVs sont des valeurs <strong>innées</strong> qui définissent les statistiques d'un Pokémon. Chaque IV va de <strong>0 à 31</strong>, et il y en a un pour chacune des 6 stats (HP, Attaque, Défense, Atk Spé, Déf Spé, Vitesse).</p>
+
+        <h3>Comment monter les IVs ?</h3>
+        <ul class="list-rules">
+          <li><strong>Capsule d'Argent</strong> : fait passer UNE stat à 31.</li>
+          <li><strong>Capsule d'Or</strong> : fait passer TOUTES les stats à 31.</li>
+          <li><strong>Reproduction</strong> : élève deux parents avec de bons IVs.</li>
+        </ul>
+
+        <h2>Les EVs (Effort Values)</h2>
+        <p>Les EVs sont des valeurs <strong>acquises</strong>, ajoutées par-dessus les IVs. Contrairement aux IVs, elles sont modifiables à volonté.</p>
+
+        <div class="info-blocks">
+          <div class="info-block">
+            <div class="info-icon">🎯</div>
+            <div>
+              <h3>252 max par stat</h3>
+              <p>Un Pokémon peut avoir jusqu'à 252 EVs dans une seule statistique.</p>
+            </div>
+          </div>
+          <div class="info-block">
+            <div class="info-icon">⚡</div>
+            <div>
+              <h3>510 total</h3>
+              <p>Le total des EVs ne peut pas dépasser 510 sur l'ensemble des stats.</p>
+            </div>
+          </div>
+        </div>
+
+        <h3>Comment monter les EVs ?</h3>
+        <ul class="list-rules">
+          <li><strong>Combats</strong> : tuer des Pokémon donne des EVs dans une stat spécifique.</li>
+          <li><strong>Vitamines</strong> : +10 EVs par dose, plafond 100 EVs par stat.</li>
+          <li><strong>Power Items</strong> : +8 EVs bonus par combat dans la stat correspondante.</li>
+          <li><strong>Macho Brace</strong> : double les EVs gagnés par combat.</li>
+        </ul>
+      </article>
+
+      <!-- ============================== -->
+      <!-- PAGE : NATURES                  -->
+      <!-- ============================== -->
+      <article class="wiki-page" id="page-natures">
+        <h1>Natures</h1>
+        <p class="page-subtitle">Chaque Pokémon possède une nature qui modifie ses statistiques : +10% sur une stat, −10% sur une autre.</p>
+
+        <div class="info-block">
+          <div class="info-icon">💡</div>
+          <div>
+            <h3>Astuce</h3>
+            <p>Choisir une nature adaptée à ton Pokémon peut faire une énorme différence en combat. Les PV ne sont jamais affectés par les natures.</p>
+          </div>
+        </div>
+
+        <h2>Tableau des 25 natures</h2>
+        <table class="wiki-table">
+          <thead>
+            <tr>
+              <th>Nom FR</th>
+              <th>Nom EN</th>
+              <th>Effet</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Rigide</td><td>Adamant</td><td>+Attaque / −Atk Spé</td></tr>
+            <tr><td>Jovial</td><td>Jolly</td><td>+Vitesse / −Atk Spé</td></tr>
+            <tr><td>Modeste</td><td>Modest</td><td>+Atk Spé / −Attaque</td></tr>
+            <tr><td>Timide</td><td>Timid</td><td>+Vitesse / −Attaque</td></tr>
+            <tr><td>Assuré</td><td>Bold</td><td>+Défense / −Attaque</td></tr>
+            <tr><td>Calme</td><td>Calm</td><td>+Déf Spé / −Attaque</td></tr>
+            <tr><td>Malin</td><td>Impish</td><td>+Défense / −Atk Spé</td></tr>
+            <tr><td>Prudent</td><td>Careful</td><td>+Déf Spé / −Atk Spé</td></tr>
+            <tr><td>Naïf</td><td>Naive</td><td>+Vitesse / −Déf Spé</td></tr>
+            <tr><td>Pressé</td><td>Hasty</td><td>+Vitesse / −Défense</td></tr>
+            <tr><td>Brave</td><td>Brave</td><td>+Attaque / −Vitesse</td></tr>
+            <tr><td>Relax</td><td>Relaxed</td><td>+Défense / −Vitesse</td></tr>
+            <tr><td>Discret</td><td>Quiet</td><td>+Atk Spé / −Vitesse</td></tr>
+            <tr><td>Malpoli</td><td>Sassy</td><td>+Déf Spé / −Vitesse</td></tr>
+            <tr><td>Foufou</td><td>Rash</td><td>+Atk Spé / −Déf Spé</td></tr>
+            <tr><td>Mauvais</td><td>Naughty</td><td>+Attaque / −Déf Spé</td></tr>
+            <tr><td>Solo</td><td>Lonely</td><td>+Attaque / −Défense</td></tr>
+            <tr><td>Doux</td><td>Mild</td><td>+Atk Spé / −Défense</td></tr>
+            <tr><td>Gentil</td><td>Gentle</td><td>+Déf Spé / −Défense</td></tr>
+            <tr><td>Lâche</td><td>Lax</td><td>+Défense / −Déf Spé</td></tr>
+            <tr><td>Hardi</td><td>Hardy</td><td>Neutre</td></tr>
+            <tr><td>Docile</td><td>Docile</td><td>Neutre</td></tr>
+            <tr><td>Pudique</td><td>Bashful</td><td>Neutre</td></tr>
+            <tr><td>Bizarre</td><td>Quirky</td><td>Neutre</td></tr>
+            <tr><td>Sérieux</td><td>Serious</td><td>Neutre</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Menthes de Nature</h2>
+        <p>Les Menthes permettent de <strong>modifier l'effet d'une nature</strong> sans changer la nature affichée. Parfait pour fix un Pokémon avec une mauvaise nature sans avoir à le re-capturer.</p>
+      </article>
+
+      <!-- ============================== -->
+      <!-- PAGE : MÉGA, Z & TÉRA           -->
+      <!-- ============================== -->
+      <article class="wiki-page" id="page-mega">
+        <h1>Méga, Z & Téra</h1>
+        <p class="page-subtitle">Les 4 bracelets de combat : Méga, Z, Dynamax et Téra.</p>
+
+        <div class="info-blocks">
+          <div class="info-block">
+            <div class="info-icon">💎</div>
+            <div>
+              <h3>Méga Bracelet</h3>
+              <p>Permet la Méga-Évolution. Obtenu au palier 63% du Cobbledex "Normaux".</p>
+            </div>
+          </div>
+          <div class="info-block">
+            <div class="info-icon">⚡</div>
+            <div>
+              <h3>Bracelet Z</h3>
+              <p>Déclenche une capacité Z surpuissante. 36 cristaux disponibles.</p>
+            </div>
+          </div>
+          <div class="info-block">
+            <div class="info-icon">🔴</div>
+            <div>
+              <h3>Dynamax Band</h3>
+              <p>Mécanique désactivée pour le moment sur OrionCube.</p>
+            </div>
+          </div>
+          <div class="info-block">
+            <div class="info-icon">💠</div>
+            <div>
+              <h3>Tera Orb</h3>
+              <p>Mécanique désactivée pour le moment sur OrionCube.</p>
+            </div>
+          </div>
+        </div>
+
+        <h2>Comment obtenir une Méga-Gemme ?</h2>
+        <p>Les Méga-Gemmes s'obtiennent de manière aléatoire via :</p>
+        <ul class="list-rules">
+          <li>Les <strong>Boss Légendaires</strong> (aura jaune).</li>
+          <li>La <strong>Battle Factory</strong> (200 BP).</li>
+          <li>La <strong>Boutique Faction</strong> (750 Cubes).</li>
+          <li>La <strong>Boutique</strong> principale (palier 20 000 Gemmes).</li>
+          <li>Les <strong>Caisses</strong> du serveur.</li>
+          <li>Les <strong>Events</strong> et <strong>Battlepass</strong>.</li>
+        </ul>
+
+        <h2>Comment Méga-Évoluer ?</h2>
+        <ol class="list-rules">
+          <li>Obtiens le <strong>Méga Bracelet</strong> au palier 63% du Cobbledex.</li>
+          <li>Obtiens une <strong>Méga Gemme</strong> adaptée à ton Pokémon.</li>
+          <li>Équipe la Gemme sur ton Pokémon (SHIFT + clic droit).</li>
+          <li>Prends le Bracelet en main, approche-toi du Pokémon, SHIFT + clic droit → Méga-Évolution.</li>
+        </ol>
+
+        <div class="warning-block">
+          <strong>💡 Info :</strong> Un seul Pokémon peut méga-évoluer par combat. En Ranked, certaines Méga-Évolutions sont interdites.
+        </div>
+      </article>
+
+    </main>
+
+  </div>
+
+  <!-- ============================================ -->
+  <!-- FOOTER                                        -->
+  <!-- ============================================ -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <span class="logo-icon">🌌</span>
+        <span>ORIONCUBE</span>
+      </div>
+      <p class="footer-text">
+        © 2026 OrionCube — Serveur Minecraft Cobblemon Français. 
+        Pokémon © Nintendo, Game Freak, The Pokémon Company.
+      </p>
+    </div>
+  </footer>
+
+  <script src="wiki.js"></script>
+</body>
+</html>
