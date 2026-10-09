@@ -17,10 +17,9 @@ if (copyIpBtn) {
     try {
       await navigator.clipboard.writeText(ip);
 
-      // Feedback visuel
       copyIpBtn.classList.add('copied');
       const originalText = ipText.textContent;
-      ipText.textContent = 'IP COPIÉE !';
+      ipText.textContent = 'BIENTÔT !';
 
       setTimeout(() => {
         copyIpBtn.classList.remove('copied');
@@ -75,46 +74,35 @@ window.addEventListener('scroll', () => {
 });
 
 // ============================================
-// COMPTEUR DE JOUEURS (Minecraft Server Status)
+// STATUT DU SERVEUR (désactivé tant que le serveur n'est pas en ligne)
 // ============================================
-// ⚠️ Remplace 'play.orioncube.fr' par l'IP de ton serveur quand tu l'auras
-const SERVER_IP = 'play.orioncube.fr';
+// ⚠️ Quand ton serveur sera en ligne, décommente ces lignes :
+//
+// const SERVER_IP = 'play.orioncube.fr';
+//
+// async function updatePlayerCount() {
+//   try {
+//     const response = await fetch(`https://api.mcsrvstat.us/3/${SERVER_IP}`);
+//     const data = await response.json();
+//
+//     const playerCount = document.getElementById('player-count');
+//     const statPlayers = document.getElementById('stat-players');
+//
+//     if (data.online && data.players) {
+//       const online = data.players.online || 0;
+//       const max = data.players.max || 100;
+//       if (playerCount) playerCount.textContent = `${online}/${max}`;
+//       if (statPlayers) statPlayers.textContent = `${online}/${max}`;
+//     }
+//   } catch (err) {
+//     console.log('⚠️ Impossible de récupérer le statut du serveur');
+//   }
+// }
+//
+// updatePlayerCount();
+// setInterval(updatePlayerCount, 60000);
 
-async function updatePlayerCount() {
-  try {
-    // Utilise l'API publique mcsrvstat.us
-    const response = await fetch(`https://api.mcsrvstat.us/3/${SERVER_IP}`);
-    const data = await response.json();
-
-    const playerCount = document.getElementById('player-count');
-    const statPlayers = document.getElementById('stat-players');
-
-    if (data.online && data.players) {
-      const online = data.players.online || 0;
-      if (playerCount) playerCount.textContent = online;
-      if (statPlayers) statPlayers.textContent = online;
-      console.log(`✅ Serveur en ligne : ${online} joueurs`);
-    } else {
-      // Serveur hors ligne → affiche "—"
-      if (playerCount) playerCount.textContent = '—';
-      if (statPlayers) statPlayers.textContent = '—';
-      console.log('⚠️ Serveur hors ligne');
-    }
-  } catch (err) {
-    // En cas d'erreur, affiche "—"
-    const playerCount = document.getElementById('player-count');
-    const statPlayers = document.getElementById('stat-players');
-    if (playerCount) playerCount.textContent = '—';
-    if (statPlayers) statPlayers.textContent = '—';
-    console.log('⚠️ Impossible de récupérer le statut du serveur');
-  }
-}
-
-// Récupère le nombre de joueurs au chargement
-updatePlayerCount();
-
-// Puis toutes les 60 secondes
-setInterval(updatePlayerCount, 60000);
+console.log('ℹ️ Statut du serveur : en développement');
 
 // ============================================
 // ANIMATIONS AU SCROLL (Fade-in)
@@ -133,7 +121,6 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, observerOptions);
 
-// Applique l'animation aux cartes
 document.querySelectorAll('.feature-card, .stat-card').forEach(card => {
   card.style.opacity = '0';
   card.style.transform = 'translateY(30px)';
