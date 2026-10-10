@@ -85,6 +85,25 @@ const translations = {
     "connexion.discord": "REJOINDRE LE DISCORD",
     "connexion.footer": "© 2026 OrionCube — Connexion en développement",
 
+    // LAUNCHER
+    "launcher.title1": "Launcher",
+    "launcher.subtitle": "Télécharge le launcher officiel et rejoins l'aventure en un clic.",
+    "launcher.version.label": "Version actuelle",
+    "launcher.date.label": "Publié le",
+    "launcher.download": "TÉLÉCHARGER LE LAUNCHER",
+    "launcher.hint": "Compatible Windows 10 / 11 · Connexion Microsoft intégrée",
+    "launcher.steps.title": "Comment ça marche ?",
+    "launcher.steps.1.title": "1. Télécharge le launcher",
+    "launcher.steps.1.text": "Clique sur le bouton ci-dessus pour télécharger le fichier OrionCube.exe.",
+    "launcher.steps.2.title": "2. Lance le fichier",
+    "launcher.steps.2.text": "Double-clique sur le fichier téléchargé. Une petite fenêtre s'ouvre.",
+    "launcher.steps.3.title": "3. Connecte ton compte Microsoft",
+    "launcher.steps.3.text": "Utilise ton compte Microsoft qui possède Minecraft Java. Aucun mot de passe n'est stocké.",
+    "launcher.steps.4.title": "4. Clique sur JOUER",
+    "launcher.steps.4.text": "Le launcher installe tout automatiquement (mods, Cobblemon, shaders) et te connecte au serveur.",
+    "launcher.help": "Un souci ? Besoin d'aide ?",
+    "launcher.discord": "REJOINDRE LE DISCORD",
+
     // CHANGELOG
     "changelog.title1": "Changelog",
     "changelog.subtitle": "Toutes les mises à jour, correctifs et nouveautés du serveur et du launcher.",
@@ -215,6 +234,25 @@ const translations = {
     "connexion.text": "The login site will open very soon! You'll be able to link your Microsoft (Minecraft) account to retrieve your profile, stats and rewards. In the meantime, you can already log in with your Microsoft account directly on the OrionCube launcher.",
     "connexion.discord": "JOIN THE DISCORD",
     "connexion.footer": "© 2026 OrionCube — Login in development",
+
+    // LAUNCHER
+    "launcher.title1": "Launcher",
+    "launcher.subtitle": "Download the official launcher and join the adventure in one click.",
+    "launcher.version.label": "Current version",
+    "launcher.date.label": "Published on",
+    "launcher.download": "DOWNLOAD THE LAUNCHER",
+    "launcher.hint": "Compatible with Windows 10 / 11 · Built-in Microsoft login",
+    "launcher.steps.title": "How does it work?",
+    "launcher.steps.1.title": "1. Download the launcher",
+    "launcher.steps.1.text": "Click the button above to download the OrionCube.exe file.",
+    "launcher.steps.2.title": "2. Launch the file",
+    "launcher.steps.2.text": "Double-click the downloaded file. A small window will open.",
+    "launcher.steps.3.title": "3. Log in with Microsoft",
+    "launcher.steps.3.text": "Use your Microsoft account that owns Minecraft Java. No password is stored.",
+    "launcher.steps.4.title": "4. Click PLAY",
+    "launcher.steps.4.text": "The launcher installs everything automatically (mods, Cobblemon, shaders) and connects you to the server.",
+    "launcher.help": "Need help?",
+    "launcher.discord": "JOIN THE DISCORD",
 
     // CHANGELOG
     "changelog.title1": "Changelog",
