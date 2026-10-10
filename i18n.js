@@ -78,6 +78,13 @@ const translations = {
     "vote.discord": "REJOINDRE LE DISCORD",
     "vote.footer": "© 2026 OrionCube — Vote en développement",
 
+    // CONNEXION
+    "connexion.title1": "Connexion",
+    "connexion.subtitle": "Très prochainement...",
+    "connexion.text": "Le site de connexion ouvrira très bientôt ! Tu pourras y lier ton compte Microsoft (Minecraft) pour récupérer ton profil, tes statistiques et tes récompenses. En attendant, tu peux déjà connecter ton compte Microsoft directement sur le launcher OrionCube.",
+    "connexion.discord": "REJOINDRE LE DISCORD",
+    "connexion.footer": "© 2026 OrionCube — Connexion en développement",
+
     // CHANGELOG
     "changelog.title1": "Changelog",
     "changelog.subtitle": "Toutes les mises à jour, correctifs et nouveautés du serveur et du launcher.",
@@ -201,6 +208,13 @@ const translations = {
     "vote.text": "The official voting system will open very soon! You'll be able to support OrionCube on Minecraft server lists and earn exclusive in-game rewards: rare Poké Balls, items, money and much more. Stay connected on our Discord to be notified at launch.",
     "vote.discord": "JOIN THE DISCORD",
     "vote.footer": "© 2026 OrionCube — Vote in development",
+
+    // CONNEXION
+    "connexion.title1": "Login",
+    "connexion.subtitle": "Coming soon...",
+    "connexion.text": "The login site will open very soon! You'll be able to link your Microsoft (Minecraft) account to retrieve your profile, stats and rewards. In the meantime, you can already log in with your Microsoft account directly on the OrionCube launcher.",
+    "connexion.discord": "JOIN THE DISCORD",
+    "connexion.footer": "© 2026 OrionCube — Login in development",
 
     // CHANGELOG
     "changelog.title1": "Changelog",
